@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "FlowChamp Capture",
+  "version": "0.3.7",
+  "description": "Capture browser prospects into FlowChamp for TrainerSource outreach.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": [
+    "https://www.linkedin.com/*",
+    "https://www.linkedin.cn/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/in/*",
+        "https://www.linkedin.com/sales/lead/*",
+        "https://www.linkedin.com/sales/people/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Add to FlowChamp",
+    "default_popup": "popup.html"
+  }
+}
