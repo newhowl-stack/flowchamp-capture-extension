@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FlowChamp</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <span>FlowChamp</span>
+        <button id="settingsToggle" type="button" title="Settings">Settings</button>
+      </header>
+
+      <div class="primary-actions">
+        <button id="capture" type="button">Capture</button>
+        <button id="enrich" type="button">Enrich</button>
+      </div>
+
+      <section id="profilePreviewPanel" class="profile-preview hidden" aria-label="Captured profile photo">
+        <img id="profilePreviewImage" alt="Captured profile photo">
+        <div>
+          <strong id="profilePreviewName">Captured profile</strong>
+          <span id="profilePreviewMeta">Ready for review</span>
+        </div>
+      </section>
+
+      <section id="statusPanel" class="panel">
+        <div id="statusIcon">...</div>
+        <h1 id="statusTitle">Capturing profile</h1>
+        <p id="status">Reading the visible LinkedIn page.</p>
+      </section>
+
+      <section id="settingsPanel" class="panel hidden">
+        <h2>One-time setup</h2>
+        <label>Backend URL<input id="backendUrl" placeholder="http://72.61.123.54:8018"></label>
+        <label>API token<input id="apiToken" type="password"></label>
+        <label>Captured by<input id="capturedBy" placeholder="Your name"></label>
+        <button id="saveSettings" type="button">Save setup</button>
+      </section>
+
+      <section id="leadPanel" class="panel">
+        <div class="panel-title">
+          <h2>Captured data</h2>
+        </div>
+        <label>Full name<input id="full_name"></label>
+        <label>LinkedIn URL<input id="linkedin_url"></label>
+        <label>Profile image URL<input id="profile_image_url"></label>
+        <label>Title<input id="title"></label>
+        <label>Years of experience<input id="years_experience" placeholder="Unknown"></label>
+        <label>Headline<textarea id="headline"></textarea></label>
+        <label>Employer<input id="current_employer"></label>
+        <label>Company<input id="company" placeholder="Self-employed only"></label>
+        <label>Location<input id="location"></label>
+        <label>Website URL<input id="website_url"></label>
+        <label>Notes<textarea id="notes"></textarea></label>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
