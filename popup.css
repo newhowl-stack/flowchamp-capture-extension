@@ -1,0 +1,198 @@
+body {
+  width: 390px;
+  margin: 0;
+  color: #17201b;
+  font-family: Inter, Arial, sans-serif;
+  background: #f7f8f4;
+}
+
+main {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+header,
+.panel-title,
+.primary-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+header {
+  font-size: 13px;
+  font-weight: 900;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+.panel {
+  border: 1px solid #d9ded6;
+  border-radius: 8px;
+  padding: 12px;
+  background: white;
+}
+
+#statusPanel {
+  display: grid;
+  gap: 8px;
+}
+
+.profile-preview {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #d9ded6;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.profile-preview.no-image {
+  grid-template-columns: 1fr;
+}
+
+.profile-preview img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eef3ef;
+}
+
+.profile-preview strong,
+.profile-preview span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-preview strong {
+  font-size: 14px;
+}
+
+.profile-preview span {
+  margin-top: 3px;
+  color: #66736c;
+  font-size: 12px;
+}
+
+#statusIcon {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: #123c35;
+  background: #eef3ef;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+#statusPanel.success #statusIcon {
+  color: #0f3f32;
+  background: #d9f0e7;
+}
+
+#statusPanel.error #statusIcon {
+  color: #752626;
+  background: #f4d9d9;
+}
+
+#status {
+  color: #66736c;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  margin-top: 8px;
+  color: #66736c;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  color: #17201b;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  background: white;
+}
+
+textarea {
+  min-height: 58px;
+  resize: vertical;
+}
+
+button {
+  border: 1px solid #123c35;
+  border-radius: 6px;
+  color: white;
+  background: #123c35;
+  padding: 8px 10px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button:disabled {
+  border-color: #94a3b8;
+  background: #94a3b8;
+  cursor: default;
+}
+
+header button {
+  color: #123c35;
+  background: transparent;
+  padding: 5px 8px;
+  font-size: 11px;
+}
+
+#saveSettings,
+#capture,
+#enrich {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.primary-actions {
+  align-items: stretch;
+}
+
+.primary-actions button {
+  min-height: 42px;
+}
+
+#capture {
+  color: #123c35;
+  background: #eef3ef;
+}
+
+.hidden {
+  display: none;
+}
